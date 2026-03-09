@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library API Documentation</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        background-color: #f8f9fa;
+        color: #333;
+        padding: 40px;
+      }
+      .container {
+        max-width: 900px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
+      h1 {
+        color: #2c3e50;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+      }
+      h2 {
+        color: #2196f3;
+        margin-top: 40px;
+        border-left: 5px solid #2196f3;
+        padding-left: 15px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        background: #fff;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 12px;
+        border-bottom: 1px solid #edf2f7;
+      }
+      th {
+        background-color: #f1f5f9;
+        color: #475569;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 0.05em;
+      }
+      .method {
+        font-weight: bold;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        display: inline-block;
+        min-width: 60px;
+        text-align: center;
+      }
+      .get {
+        background-color: #ebf8ff;
+        color: #3182ce;
+      }
+      .post {
+        background-color: #f0fff4;
+        color: #38a169;
+      }
+      .put {
+        background-color: #fffaf0;
+        color: #dd6b20;
+      }
+      .delete {
+        background-color: #fff5f5;
+        color: #e53e3e;
+      }
+      code {
+        background: #f1f5f9;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: "Courier New", Courier, monospace;
+        color: #e02424;
+      }
+      .validation {
+        font-style: italic;
+        color: #64748b;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Library API Documentation</h1>
+      <p>
+        Use the endpoints below to interact with the Library Management System.
+        Ensure <code>Content-Type: application/json</code> is set for POST/PUT
+        requests.
+      </p>
+
+      <section>
+        <h2>📚 Books Management</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Endpoint</th>
+              <th>Description</th>
+              <th>Validation / Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="method get">GET</span></td>
+              <td><code>/books</code></td>
+              <td>Retrieve all books</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><span class="method get">GET</span></td>
+              <td><code>/books/:id</code></td>
+              <td>Get specific book by ID</td>
+              <td class="validation">ID must be an integer</td>
+            </tr>
+            <tr>
+              <td><span class="method post">POST</span></td>
+              <td><code>/books</code></td>
+              <td>Create a new book entry</td>
+              <td>Requires JSON body</td>
+            </tr>
+            <tr>
+              <td><span class="method put">PUT</span></td>
+              <td><code>/books/:id</code></td>
+              <td>Update book credentials</td>
+              <td class="validation">ID must be an integer</td>
+            </tr>
+            <tr>
+              <td><span class="method delete">DELETE</span></td>
+              <td><code>/books/:id</code></td>
+              <td>Remove book from library</td>
+              <td class="validation">ID must be an integer</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>✍️ Author Management</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Endpoint</th>
+              <th>Description</th>
+              <th>Validation / Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="method get">GET</span></td>
+              <td><code>/authors</code></td>
+              <td>Retrieve all authors</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><span class="method get">GET</span></td>
+              <td><code>/authors/:id</code></td>
+              <td>Get specific author by ID</td>
+              <td class="validation">ID must be an integer</td>
+            </tr>
+            <tr>
+              <td><span class="method post">POST</span></td>
+              <td><code>/authors</code></td>
+              <td>Create a new author</td>
+              <td>Requires JSON body</td>
+            </tr>
+            <tr>
+              <td><span class="method put">PUT</span></td>
+              <td><code>/authors/:id</code></td>
+              <td>Update author details</td>
+              <td class="validation">ID must be an integer</td>
+            </tr>
+            <tr>
+              <td><span class="method delete">DELETE</span></td>
+              <td><code>/authors/:id</code></td>
+              <td>Delete author profile</td>
+              <td class="validation">ID must be an integer</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </body>
+</html>
