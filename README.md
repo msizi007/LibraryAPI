@@ -1,4 +1,5 @@
 ## Library Management API
+![LibraryAPI](https://socialify.git.ci/msizi007/LibraryAPI/image?language=1&name=1&owner=1&stargazers=1&theme=Light)
 
 A professional RESTful API developed with **Node.js**, **Express**, and **TypeScript**. This project provides a structured backend for managing books and authors, featuring robust request validation and automated development workflows.
 
